@@ -1,0 +1,79 @@
+﻿@*@model IEnumerable<Another.Models.Uploads>*@
+@model Another.Models.Uploads
+
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form asp-action="Edit">
+    <fieldset class="form-group">
+        <h2>Edit content</h2>
+        @*@Html.LabelFor(m => m.UserId);
+        @Html.TextAreaFor(m => m.UserId);
+
+        @Html.LabelFor(m => m.Subject_Name);
+        @Html.TextAreaFor(m => m.Subject_Name);
+
+        @Html.LabelFor(m => m.Subject_Code);
+        @Html.TextAreaFor(m => m.Subject_Code);
+
+        @Html.LabelFor(m => m.Study_Year);
+        @Html.TextAreaFor(m => m.Study_Year);
+
+        @Html.LabelFor(m => m.Description);
+        @Html.TextAreaFor(m => m.Description);
+
+        @Html.LabelFor(m => m.Hashtags);
+        @Html.TextAreaFor(m => m.Hashtags);*@
+        @*<table>
+            <tr>
+                <td>Select File:</td>
+                <td>
+                    <asp:FileUpload />
+                </td>
+            </tr>
+        </table>*@
+        <div class="form-group">
+            <label asp-for="UserId" class="control-label"></label>
+            <input asp-for="UserId" class="form-control" />
+            <span asp-validation-for="UserId" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Subject_Name" class="control-label"></label>
+            <input asp-for="Subject_Name" class="form-control" />
+            <span asp-validation-for="Subject_Name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Subject_Code" class="control-label"></label>
+            <input asp-for="Subject_Code" class="form-control" />
+            <span asp-validation-for="Subject_Code" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Study_Year" class="control-label"></label>
+            <input asp-for="Study_Year" class="form-control" />
+            <span asp-validation-for="Study_Year" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Description" class="control-label"></label>
+            <input asp-for="Description" class="form-control" />
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Hashtags" class="control-label"></label>
+            <input asp-for="Hashtags" class="form-control" />
+            <span asp-validation-for="Hashtags" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="file_Upload" class="control-label"></label>
+            <input asp-for="file_Upload" class="form-control" />
+            <span asp-validation-for="file_Upload" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Edit" class="btn btn-primary" />
+        </div>
+
+    </fieldset>
+
+</form>
